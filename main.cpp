@@ -3,7 +3,7 @@
 
 bool MyApp::OnInit()
 {
-  auto* frame = new MainFrame("Quarter Master", wxPoint(50, 50), wxSize(500, 400));
+  auto* frame = new MainFrame("Quarter Master", wxPoint(50, 50), wxSize(500, 500));
   frame->Show(true);
   return true;
 }
