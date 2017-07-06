@@ -1,0 +1,8 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 3.8)
+PROJECT (QuarterMaster)
+SET (wxWidgets_CONFIGURATION mswu)
+ADD_EXECUTABLE (Quarter_Master WIN32 main.cpp MainFrame.cpp ButtonBase.cpp HelloButton.cpp)
+FIND_PACKAGE (wxWidgets COMPONENTS core base REQUIRED)
+INCLUDE (${wxWidgets_USE_FILE})
+TARGET_LINK_LIBRARIES (Quarter_Master ${wxWidgets_LIBRARIES})
+SET_PROPERTY (TARGET Quarter_Master PROPERTY CXX_STANDARD 14)
