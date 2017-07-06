@@ -12,8 +12,10 @@ ButtonBase::ButtonBase(wxWindow* parent,
 {
 }
 
+const int ButtonBase::ID_CLICK_BUTTON = 4;
+
 wxBEGIN_EVENT_TABLE(ButtonBase, wxButton)
-  EVT_BUTTON(4, ButtonBase::OnClick)
+EVT_BUTTON(ID_CLICK_BUTTON, ButtonBase::OnClick)
 wxEND_EVENT_TABLE()
 
 void ButtonBase::OnClick(wxCommandEvent& event)

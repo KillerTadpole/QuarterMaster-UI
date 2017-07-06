@@ -19,7 +19,7 @@ public:
              long style = 0,
              wxValidator const& validator = wxDefaultValidator,
              const wxString& name = wxButtonNameStr);
-
+  static const int ID_CLICK_BUTTON;
 private:
   void OnClick(wxCommandEvent& event);
   wxDECLARE_EVENT_TABLE();
