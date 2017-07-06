@@ -27,6 +27,7 @@ MainFrame::MainFrame(wxString const& title,
   SetStatusText("Welcome to Quarter Master!");
   pButton = new HelloButton(this, 4, "cool button", wxPoint(50, 50));
   pButton2 = new ButtonBase(this, 4, "button2", wxPoint(50, 100));
+  pButton3 = new HelloButton(this, 4, "New Button", wxPoint(300, 50));
 }
 
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)

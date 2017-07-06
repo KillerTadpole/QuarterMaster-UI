@@ -1,10 +1,5 @@
 #include "HelloButton.hpp"
 
-namespace
-{
-  const int ID_CLICK_HELLO = 4;
-}
-
 HelloButton::HelloButton(wxWindow* parent,
                          wxWindowID id,
                          wxString const& label,
@@ -18,7 +13,7 @@ HelloButton::HelloButton(wxWindow* parent,
 }
 
 wxBEGIN_EVENT_TABLE(HelloButton, ButtonBase)
-  EVT_BUTTON(4, HelloButton::OnClick)
+  EVT_BUTTON(ButtonBase::ID_CLICK_BUTTON, HelloButton::OnClick)
 wxEND_EVENT_TABLE()
 
 void HelloButton::OnClick(wxCommandEvent& event)

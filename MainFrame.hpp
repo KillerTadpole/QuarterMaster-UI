@@ -19,6 +19,7 @@ private:
   void OnAbout(wxCommandEvent& event);
   ButtonBase* pButton;
   ButtonBase* pButton2;
+  ButtonBase* pButton3;
   wxDECLARE_EVENT_TABLE();
 };
 
