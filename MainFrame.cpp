@@ -13,8 +13,8 @@ MainFrame::MainFrame(wxString const& title,
 {
   auto* menuFile = new wxMenu();
   menuFile->Append(ID_HELLO,
-                   "&Save\tCtrl-S",
-                   "Help string shown in status bar for this menu item");
+      "&Save\tCtrl-S",
+      "This button saves your stuff! ;)");
   menuFile->AppendSeparator();
   menuFile->Append(wxID_EXIT);
   wxMenu* menuHelp = new wxMenu;
