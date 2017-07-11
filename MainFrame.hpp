@@ -17,6 +17,7 @@ private:
   void OnHello(wxCommandEvent& event);
   void OnExit(wxCommandEvent& event);
   void OnAbout(wxCommandEvent& event);
+  void OnAdd(wxCommandEvent& event);
   ButtonBase* pButton;
   ButtonBase* pButton2;
   ButtonBase* pButton3;

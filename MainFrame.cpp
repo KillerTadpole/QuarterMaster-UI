@@ -4,6 +4,7 @@
 namespace
 {
   const int ID_HELLO = 3;
+  const int ID_ADD = 2;
 }
 
 MainFrame::MainFrame(wxString const& title,
@@ -17,6 +18,10 @@ MainFrame::MainFrame(wxString const& title,
       "This button saves your stuff! ;)");
   menuFile->AppendSeparator();
   menuFile->Append(wxID_EXIT);
+  menuFile->AppendSeparator();
+  menuFile->Append(ID_ADD,
+      "&AddItem\tCtrl-I",
+      "Have you bought something new?");
   wxMenu* menuHelp = new wxMenu;
   menuHelp->Append(wxID_HELP);
   wxMenuBar* menuBar = new wxMenuBar;
@@ -32,13 +37,19 @@ MainFrame::MainFrame(wxString const& title,
 
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
   EVT_MENU(ID_HELLO, MainFrame::OnHello)
+  EVT_MENU(ID_ADD, MainFrame::OnAdd)
   EVT_MENU(wxID_EXIT, MainFrame::OnExit)
   EVT_MENU(wxID_HELP, MainFrame::OnAbout)
 wxEND_EVENT_TABLE()
 
 void MainFrame::OnHello(wxCommandEvent& event)
 {
-  wxLogMessage("Hello world from wxWidgets!");
+  wxLogMessage("Your information has been saved!");
+}
+
+void MainFrame::OnAdd(wxCommandEvent& event)
+{
+    wxLogMessage("Add your item in the blaks below");
 }
 
 void MainFrame::OnExit(wxCommandEvent& event)
