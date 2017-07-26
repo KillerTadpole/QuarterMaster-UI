@@ -1,6 +1,6 @@
 import psycopg2
 
-first = "chuck"
+first = "chuck
 last = "Berry"
 number = "123"
 
@@ -21,15 +21,15 @@ try:
     records = cur.fetchall()
     print (records)
     
-    cur.execute("insert into contacts values(firstName) values (%s)", [first])
+    cur.execute("insert into contacts (firstName) values (%s)", [first])
     conn.commit()
     
     print ("After inserting Chuck Barry ..........................")
-    curr = conn.cursor()
-    curr.execute ("select * from contacts")
-    records = curr.fetchall()
+    cur = conn.cursor()
+    cur.execute ("select * from contacts")
+    records = cur.fetchall()
     print (records)
-    curr.close()
+    cur.close()
 
 except (Exception, psycopg2.DatabaseError) as error:
     print(error)
